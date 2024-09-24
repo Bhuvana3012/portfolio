@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <a href="#" class="logo">portfolio.</a>
+        <nav class="navbar">
+            <a href="#home" class="active" style="--i:1">Home</a>
+            <a href="#about" style="--i:2">About</a>
+            <a href="#skills" style="--i:3">Skills</a> <!-- Fixed: Referencing correct 'id' -->
+            <a href="#contact" style="--i:4">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <div class="container" id="home">
+        <div class="home-content">
+            <h3 class="part-1">Hello, Myself</h3>
+            <h1 class="part-2">BHUVANA</h1>
+            <h3>And I'm a <span>Web Developer</span></h3>
+            <p>Welcome to my digital home. I hope that you'll like this portfolio.</p>
+            <div class="social-media">
+                <a href="#"><i class="uil uil-instagram" style="--i:7"></i></a>
+                <a href="#"><i class="uil uil-twitter" style="--i:8"></i></a>
+                <a href="#"><i class="uil uil-linkedin" style="--i:9"></i></a>
+                <a href="#"><i class="uil uil-skype" style="--i:10"></i></a>
+            </div>
+            <br>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-container" id="about">
+        <div class="heading">About <span>Me</span></div><br><br>
+        <p class="aligned-text">
+            I am BHUVANESHWARI M, a recent graduate from Madurai KamarajarUniversity.
+             I am passionate  about web development, with a degree in B.Sc form
+             Kamarajar University. In my spare time, I enjoy listening to music.
+              I'm excited to explore new opportunities and continue growing in my career.
+        </p><br><br><br><br><br><br><br><br><br>
+        
+        <button class="button">Download Resume</button>
+    </section>
+
+    <!-- Skills Section -->
+     <!-- Skills Section -->
+<section id="skills" class="skills-section">
+    <div class="heading">Skills</div>
+    <h1 align-item=center>Professional Skill</h1><br>
+    <div class="skills-list">
+        <div class="skill-item">
+            <div class="skill-info">
+                <span>HTML</span>
+                <span>90%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%;"></div>
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-info">
+                <span>CSS</span>
+                <span>85%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%;"></div>
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-info">
+                <span>JavaScript</span>
+                <span>80%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%;"></div>
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-info">
+                <span>photography</span>
+                <span>75%</span>
+            </div>
+            
+        </div>
+        
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 70%;"></div>
+            </div><br><br>
+            <div class="animated-paragraph">
+                <p>Strong leadership and effective communication skills. Adept at fostering teamwork and collaboration among diverse groups, 
+                   while demonstrating problem-solving abilities in fast-paced environments. 
+                   Proven track record of adapting to changing priorities and driving successful outcomes.</p>
+            </div>
+        </div>    
+    </div>
+</section>
+<section class="contact section" id="contact">
+    <h2 class="section-title" data-aos="fade-down">Contact Me</h2>
+    <div class="contact-container">
+        <div class="contact-card" data-aos="fade-up">
+            <form action="#" class="contact-form">
+                <div class="input-container">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" placeholder="Name" class="control_input" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-envelope icon"></i>
+                    <input type="email" placeholder=" Email" class="control_input" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-phone-alt icon"></i>
+                    <input type="tel" placeholder="Phone" class="control_input" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-comment-dots icon"></i>
+                    <textarea class="control_input" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <input type="submit" value="Send Message" class="control_button">
+            </form>
+        </div>
+    </div>
+</section>
+
+
+    
+   
+
+    <!-- AOS (Animation on Scroll) Initialization -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.j

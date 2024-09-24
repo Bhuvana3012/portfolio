@@ -1,0 +1,370 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #001b29;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10%;
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Stick it to the top of the page */
+    left: 0;
+    width: 100%; /* Make sure it spans the full width */
+    background-color: #001b29; /* Ensure the background color stays visible */
+    z-index: 1000; /* Keep it above other elements */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: white;
+    padding: 0 16px;
+    font-weight: 600;
+    transition: 0.2s all;
+    opacity: 0;
+    animation: navMenu 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover {
+    color: rgb(83, 198, 243);
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    padding: 20px 10%;
+    left:80px;
+}
+
+/* Home Content */
+.home-content h3 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+}
+
+.home-content h1 {
+    font-size: 40px;
+    font-weight: 500;
+    opacity: 0;
+    animation: slideRight 0.5s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3 span {
+    color: rgba(59, 211, 72, 0.938);
+    font-size: 30px;
+}
+/* Paragraph Style */
+.home-content p {
+    font-size: 20px;
+    margin: 20px 0;   
+    line-height: 1.5;   
+    color: rgba(255, 255, 255, 0.8); 
+    text-align: center;
+    animation: fadeIn 1s ease forwards; 
+    opacity: 0;
+    animation-delay: 1s; 
+}
+
+/* Keyframes for Fade In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Social Media Icons */
+.social-media {
+    margin: 20px 0;
+}
+
+.social-media a {
+    color: #0ef;
+    font-size: 30px;
+    margin: 0 10px;
+    transition: 0.5s ease;
+}
+
+.social-media a:hover {
+    box-shadow: 0 0 1rem #0ef;
+    background-color: #0ef;
+}
+
+/* Button */
+.button {
+    background-color: #0ef;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 40px;
+    transition: 0.3s;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: white;
+    color: #001b29;
+}
+
+/* About Section */
+.about-container {
+    padding: 50px 10%;
+    text-align: center;
+    height:100vh;
+}
+
+.about-container .heading {
+    font-size:50px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.about-container p{
+    font-size: 30px;
+    line-height: 1.6;
+    
+}
+.button {
+    background-color: #0ef;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 40px;
+    transition: 0.3s;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: white;
+    color: #001b29;
+}
+
+/* Keyframes */
+@keyframes navMenu {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Skills Section */
+.skills-section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #001b29;
+    color: white;
+    height:100vh;
+}
+
+.skills-section .heading {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #0ef;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-item {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 5px;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: #3498db;
+    border-radius: 6px;
+    transition: width 1s ease-in-out;
+}
+
+.skill-item:nth-child(2) .skill-progress {
+    background-color: #1abc9c;
+}
+
+.skill-item:nth-child(3) .skill-progress {
+    background-color: #f1c40f;
+}
+
+.skill-item:nth-child(4) .skill-progress {
+    background-color: #e67e22;
+}
+
+.skill-item:nth-child(5) .skill-progress {
+    background-color: #e74c3c;
+}
+.animated-paragraph {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly below */
+    animation: fadeIn 1s forwards; /* Apply the animation */
+}
+.animated-paragraph {
+    font-size:20px;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* End fully visible */
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+
+/* Add Hover Animation to Skills */
+.contact {
+    color: #ecf0f1; /* Light text color */
+    padding: 60px 20px;
+    border-radius: 8px;
+    height:100vh;
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start below */
+    animation: fadeIn 0.5s forwards; /* Fade-in animation */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #1abc9c; /* Accent color */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-card {
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 700px; /* Adjust max-width as needed */
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1abc9c; /* Icon color */
+}
+
+.control_input {
+    width: 100%;
+    padding: 12px 40px; /* Padding to avoid overlap with icon */
+    border: 1px solid #7f8c8d; /* Light border */
+    border-radius: 5px;
+    color: white;
+    transition: border-color 0.3s ease;
+}
+
+.control_input:focus {
+    border-color: #1abc9c; /* Highlight on focus */
+}
+
+.control_button {
+    background-color: #1abc9c; /* Button color */
+    color: white;
+    width: 30%;
+    padding: 12px 20px;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+}
+
+.control_button:hover {
+    background-color: #16a085; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly scale up the button on hover */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* End fully visible */
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+
